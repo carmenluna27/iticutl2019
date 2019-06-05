@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Plantilla</title>
+	<title>Inicio</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" type="text/css" href="../plugins/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="../plugins/fontawesome-free-5.8.1-web/css/all.min.css">
@@ -25,7 +25,7 @@
 			</div>
 			<div class="col-xs-12 col-sm-9 col-md-10 col-lg-10 cont">
 			   <div class="titulo borde sombra">
-			        <h3>Registro de alumnos</h3>
+			        <h3>Sistema para el control de acceso a los centros de cómputo dentro de la Universidad Tecnológica Linares</h3>
 			   </div>	
 			   <div class="contenido borde sombra">
 			        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad impedit, exercitationem hic, architecto eos alias animi nihil aliquid delectus officiis repudiandae officia laborum quos illum quibusdam sed iusto ipsa qui.

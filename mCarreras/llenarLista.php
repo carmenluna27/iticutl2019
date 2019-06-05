@@ -5,11 +5,12 @@ include'../conexion/conexion.php';
 mysql_query("SET NAMES utf8");
 // Consulta a la base de datos
 $consulta=mysql_query("SELECT
-												id_carrera,
-												nombre,
-												abreviatura
-										FROM carreras
-										ORDER BY carreras.id_carrera DESC",$conexion) or die (mysql_error());
+							id_carrera,
+							activo,
+							nombre,
+							abreviatura
+						FROM
+							carreras ORDER BY id_carrera DESC",$conexion) or die (mysql_error());
 // $row=mysql_fetch_row($consulta)
  ?>
 				            <div class="table-responsive">
@@ -20,7 +21,6 @@ $consulta=mysql_query("SELECT
 				                        <th>#</th>
 				                        <th>Carrera</th>
 				                        <th>Abreviatura</th>
-				                        
 				                        <th>Editar</th>
 				                        <th>Estatus</th>
 				                      </tr>
@@ -30,55 +30,46 @@ $consulta=mysql_query("SELECT
 				                    <?php 
 				                    $n=1;
 				                    while ($row=mysql_fetch_row($consulta)) {
-										$idCarrera   = $row[0];
-										// $idCrrera   = $row[1];
-										// $idPersona  = $row[2];
-										// $noControl  = $row[3];
-										$nomCarrera  = $row[1];
-										$nomAbreviatura = $row[2];
-										$activo     = $row[4];
-
-										$checado=($activo==1)?'checked':'';		
+										$idCarrera   =$row[0];
+										$activo      =$row[1];
+										$nomCarrera  =$row[2];
+										$abreviatura =$row[3];
+										
+										$checado=($activo==1)?'checked':'';
 										$desabilitar=($activo==0)?'disabled':'';
 										$claseDesabilita=($activo==0)?'desabilita':'';
-															?>
+				                      ?>
 				                      <tr>
 				                        <td >
-				                          <p id="<?php echo "tConsecutivo".$n; ?>" class="<?php echo $claseDesabilita; ?>">
+				                          <p id="<?php echo "tConsecutivo".$n; ?>"class="<?php echo $claseDesabilita; ?>">
 				                          	<?php echo "$n"; ?>
 				                          </p>
 				                        </td>
 				                        <td>
-																<p id="<?php echo "tCarrera".$n; ?>" class="<?php echo $claseDesabilita; ?>">
+				                          <p id="<?php echo "tCarrera".$n; ?>"class="<?php echo $claseDesabilita; ?>">
 				                          	<?php echo $nomCarrera; ?>
 				                          </p>
 				                        </td>
 				                        <td>
-																<p id="<?php echo "tAbreviatura".$n; ?>" class="<?php echo $claseDesabilita; ?>">
-				                          	<?php echo $nomAbreviatura; ?>
+				                          <p id="<?php echo "tAbreviatura".$n; ?>" class="<?php echo $claseDesabilita; ?>">
+				                          	<?php echo $abreviatura; ?>
 				                          </p>
 				                        </td>
-				                        
 
 				                        <td>
-				                          <button id="<?php echo "boton".$n; ?>" <?php echo $desabilitar ?>  type="button" class="btn btn-login btn-sm" 
+				                          <button id="<?php echo "boton".$n; ?>" <?php echo $desabilitar ?> type="button" class="btn btn-login btn-sm" 
 				                          onclick="abrirModalEditar(
-				                          							'<?php echo $nombre ?>',
-				                          							'<?php echo $paterno ?>',
-				                          							'<?php echo $materno ?>',
-				                          							'<?php echo $direccion ?>',
-				                          							'<?php echo $telefono ?>',
-				                          							'<?php echo $fecha_nac ?>',
-				                          							'<?php echo $correo ?>',
-																								'<?php echo $tipoPersona ?>',
-																								'<?php echo $genero ?>',
-																								'<?php echo $idPersona ?>'
+				                          							'<?php echo $nomCarrera ?>',
+				                          							'<?php echo $abreviatura ?>',
+				                          							
+				                          							'<?php echo $idCarrera ?>'
+
 				                          							);">
 				                          	<i class="far fa-edit"></i>
 				                          </button>
 				                        </td>
 				                        <td>
-											<input  data-size="small" data-style="android" value="<?php echo "$valor"; ?>" type="checkbox" <?php echo "$checado"; ?>  id="<?php echo "interruptor".$n; ?>"  data-toggle="toggle" data-on="Desactivar" data-off="Activar" data-onstyle="danger" data-offstyle="success" class="interruptor" data-width="100" onchange="status(<?php echo $n; ?>,<?php echo $idAlumno; ?>);">
+											<input  data-size="small" data-style="android" value="<?php echo "$valor"; ?>" type="checkbox" <?php echo "$checado"; ?>  id="<?php echo "interruptor".$n; ?>"  data-toggle="toggle" data-on="Desactivar" data-off="Activar" data-onstyle="danger" data-offstyle="success" class="interruptor" data-width="100" onchange="status(<?php echo $n; ?>,<?php echo $idCarrera; ?>);">
 				                        </td>
 				                      </tr>
 				                      <?php
@@ -90,10 +81,9 @@ $consulta=mysql_query("SELECT
 
 				                    <tfoot align="center">
 				                      <tr class="info">
-																<th>#</th>
+				                         <th>#</th>
 				                        <th>Carrera</th>
 				                        <th>Abreviatura</th>
-				                        
 				                        <th>Editar</th>
 				                        <th>Estatus</th>
 				                      </tr>
@@ -154,3 +144,4 @@ $consulta=mysql_query("SELECT
             $(".interruptor").bootstrapToggle('destroy');
             $(".interruptor").bootstrapToggle();
       </script>
+    

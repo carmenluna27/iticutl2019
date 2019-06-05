@@ -2,7 +2,7 @@
 include'../conexion/conexion.php';
 
 // Variables de configuración
-$titulo="Catálago de personas";
+$titulo="Catálago de Personas";
 $opcionMenu="A";
 
  ?>
@@ -10,7 +10,7 @@ $opcionMenu="A";
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Plantilla</title>
+	<title>Personas</title>
 
 	<!-- Meta para compatibilidad en dispositivos mobiles -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -160,7 +160,7 @@ $opcionMenu="A";
 	    <div class="modal-content">
 	      <div class="modal-header">
 	        <button type="button" class="close" data-dismiss="modal">&times;</button>
-	        <h4 class="modal-title">Editar datos personas</h4>
+	        <h4 class="modal-title">Editar Datos Personas</h4>
 	      </div>
 	      <div class="modal-body">
 				<input type="hidden" id="idE">
