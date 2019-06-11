@@ -7,6 +7,12 @@
 	<link rel="stylesheet" type="text/css" href="../plugins/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="../plugins/fontawesome-free-5.8.1-web/css/all.min.css">
 	<link rel="stylesheet" type="text/css" href="../css/estilos.css">
+	<!-- Alertify	 -->
+	<link rel="stylesheet" type="text/css" href="../plugins/alertifyjs/css/alertify.css">
+	<link rel="stylesheet" type="text/css" href="../plugins/alertifyjs/css/themes/bootstrap.css">
+	<!-- bootstrap-toggle-master -->
+	<link href="../plugins/bootstrap-toggle-master/css/bootstrap-toggle.css" rel="stylesheet">
+    <link href="../plugins/bootstrap-toggle-master/stylesheet.css" rel="stylesheet">
 </head>
 <body class="login">
 	<div class="container">
