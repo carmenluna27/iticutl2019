@@ -23,7 +23,8 @@
 
 				<li class="list-unstyled">
 					<p  class="user fondo">
-						Maria del Carmen Luna Cuellar
+						<!-- Maria del Carmen Luna Cuellar -->
+						<?php echo $_SESSION["nCompleto"];?>
 					</p>
 				</li>
 			</ul>
