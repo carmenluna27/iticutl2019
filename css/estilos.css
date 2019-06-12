@@ -1,7 +1,7 @@
 /*-------------Inicio Selecciona color-------------*/
 :root {
-	--colorPrimario  : #192a56;
-	--colorSecundario: #44bd32;
+	--colorPrimario  : #2c3e50;
+	--colorSecundario: #ecf0f1;
 	--colorTerciario : #fff;
 }
 /* comentario */
@@ -178,10 +178,10 @@ h3{
 		font-size: 13px;
 	}
 	
-	.sidebar  h2.fondo{
+	/* .sidebar  h2.fondo{
 		padding  : 2px;
 		font-size: 13px;
-	}
+	} */
 
 	div.titulo{
 		margin-top: 12px;
