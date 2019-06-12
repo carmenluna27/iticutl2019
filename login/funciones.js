@@ -5,7 +5,7 @@ function entrando(){
 function cambioContra(){
     $("#cuerpo").hide();
     $("#cambiarContra").fadeIn('low');
-    alertify.warning("Debes de cambiar tu contraseña , ya que es tu primer ingreso al sistema",3);
+    alertify.warning("Debe de cambiar su contraseña, ya que es su primer ingreso al sistema",3);
     $("#vContra1").val('');
     $("#vContra2").val('');
     $("#vContra1").focus();
@@ -25,9 +25,9 @@ $("#frmIngreso").submit(function(e){
         .setting({
             'title':'Acceso denegado',
             'label':'Aceptar',
-            'message': 'Debes de colocar nombre de usuario y contraseña' ,
+            'message': 'Debe de colocar nombre de usuario y contraseña' ,
             'onok': function(){ 
-                alertify.message('Gracias !');
+                alertify.message('Gracias');
                 $("#username").val('');
                 $("#pass").val('');
                 $("#username").focus();
@@ -56,7 +56,7 @@ $("#frmIngreso").submit(function(e){
                             'label':'Aceptar',
                             'message': 'Nombre de usuario o contraseña incorrectos' ,
                             'onok': function(){ 
-                                alertify.message('Gracias !');
+                                alertify.message('Gracias');
                                 $('#frmIngreso')[0].reset();
                             }
                         }).show();   
@@ -67,7 +67,7 @@ $("#frmIngreso").submit(function(e){
                             cambioContra();
                             $("#usuario").val(usuario);                       
                         }else{
-                            alertify.success('Ingresando....') ; 
+                            alertify.success('Ingresando...') ; 
                             preCarga(2000,2);
                             setInterval(entrando, 2000);
                     }
