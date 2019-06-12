@@ -8,7 +8,7 @@
 							</a>
 						</li >
 						<li class="list-unstyled">
-							<a href="" id="mnuA" class="menuInicio">
+						<a href="#" onclick="imprimir();" id="mnuB" class="menuInicio">
 								<i class="fas fa-certificate"></i> Catálogo de Carreras
 							</a>
 						</li>
