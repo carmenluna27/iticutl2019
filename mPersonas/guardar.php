@@ -6,6 +6,7 @@ $nombre    = $_POST["nombre"];
 $paterno   = $_POST["paterno"];
 $materno   = $_POST["materno"];
 $direccion = $_POST["direccion"];
+$fecha_nac = $_POST["fecha_nac"];
 $telefono  = $_POST["telefono"];
 $correo    = $_POST["correo"];
 $tipo      = $_POST["tipo"];
