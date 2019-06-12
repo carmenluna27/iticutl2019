@@ -184,7 +184,7 @@ $opcionMenu="A";
 		};	
 	</script> 
 
-		<script src="../plugins/bootstrap-fileinput-master/js/plugins/piexif.js" type="text/javascript"></script>
+	<script src="../plugins/bootstrap-fileinput-master/js/plugins/piexif.js" type="text/javascript"></script>
     <script src="../plugins/bootstrap-fileinput-master/js/plugins/sortable.js" type="text/javascript"></script>
     <script src="../plugins/bootstrap-fileinput-master/js/fileinput.js" type="text/javascript"></script>
     <script src="../plugins/bootstrap-fileinput-master/js/locales/fr.js" type="text/javascript"></script>
